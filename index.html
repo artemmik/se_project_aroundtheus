@@ -25,7 +25,7 @@
             </div>
             <p class="profile__description" id="profile-description">Explorer</p>
           </div>
-          <button class="profile__add-button" type="button"></button>
+          <button class="profile__add-button" id="profile-add-button" type="button"></button>
         </section>
         <section class="cards page__section">
           <ul class="cards__list" id="cards-list">
@@ -45,10 +45,12 @@
         <div class="card__description">
           <h2 class="card__title"></h2>
           <button class="card__like-button" type="button"></button>
+          <button class="card__delete-button" type="button"></button>
         </div>
       </li>
     </template>
 
+    <!-- Profile Edit Modal -->
     <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
         <button class="modal__close" id="modal-edit-close"></button>
@@ -60,6 +62,29 @@
         </form>
       </div>
     </div>
+
+    <!-- Add Place Modal -->
+    <div class="modal" id="add-place-modal">
+      <div class="modal__container">
+        <button class="modal__close" id="modal-add-close"></button>
+        <h2 class="modal__heading">New Place</h2>
+        <form class="modal__form" id="add-place-form">
+          <input class="modal__input" type="text" name="title" placeholder="Title" id="place-title-input" required />
+          <input class="modal__input" type="url" name="image" placeholder="Image URL" id="place-image-input" required />
+          <button class="modal__button" type="submit">Create</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Image Preview Modal -->
+    <div class="modal" id="image-preview-modal">
+      <div class="modal__container modal__container--preview">
+        <button class="modal__close modal-preview__close" id="modal-preview-close"></button>
+        <img class="modal__image" id="image-preview" src="" alt="Preview Image" />
+        <p class="modal__caption modal-preview__title" id="image-caption"></p>
+      </div>
+    </div>
+
     <script src="./scripts/index.js"></script>
   </body>
 </html>
